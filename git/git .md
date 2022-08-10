@@ -13,6 +13,7 @@
   * `git add filename`
 * 添加到本地仓库
   * `git commit`
+  * `git commit -m "xxx"`
   * 可以使用 `git -am "commit content"` 同时进行附加和简短的提交信息
 * 查看前面版本
   * `git log`
@@ -34,11 +35,14 @@
   * `git clone xxx.com`
   * github 的主分支为 main
   * 本地仓库发主分支为 master
+* 添加远程仓库
+  * `git remote add origin https://github.com/cease2e/code.git`
 * 查看本地仓库与哪些远程仓库有联系
   * `git remote -v`
 * 更新到远程仓库
   * `git push`
   * github 需使用 token
+  * `git push -u origin main`
 * 将远程仓库拉到本地仓库
   * `git fetch`
   * 可以指定远程仓库和分支名
@@ -46,3 +50,5 @@
   * `git diff remote-name/branch-name`
 * 远程仓库内容整合到工作区
   * `git pull`
+* git 修改主分支名称
+  * `git branch -M main`
