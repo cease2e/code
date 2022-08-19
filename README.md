@@ -13,6 +13,7 @@ xxx | C | C++ | JavaScript | Python | Go | Ruby |
 注释 | // /**/ | // /**/ | // /**/ | # ''' """ | // /**/ | # =begin =end |
 函数结尾 | 无 | 有 | 有 | 无 | 无 | 无 |
 一维数组 | int* result = (int *)malloc(numsSize * sizeof(int)); | vector<int> result(nums.size(), 0); | let result = new Array(nums.length).fill(0); | result = [-1] * len(nums) | result := make([]int, n) | result = Array.new(n) |
+三元运算符 | 有 | 有 | 有 | 无 | 无 | 有
 
 * C++ 中 `sizeof(array)` 是用来求对象所占内存空间的大小。
 
