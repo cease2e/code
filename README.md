@@ -17,6 +17,80 @@ xxx | C | C++ | JavaScript | Python | Go | Ruby |
 
 * C++ 中 `sizeof(array)` 是用来求对象所占内存空间的大小。
 
+### 二维数组
+
+C
+
+```c
+int** generateMatrix(int n, int* returnSize, int** returnColumnSizes){
+    // 返回的结果数组的大小
+    *returnSize = n; // 行数
+    *returnColumnSizes = (int*)malloc(sizeof(int) * n); // 列数
+    // 返回结果数组 res
+    int** res = (int**)malloc(sizeof(int*) * n);  // n 行
+    int i;
+    for(i = 0; i < n; i++) {
+        res[i] = (int*)malloc(sizeof(int) * n);  // 每行 n 列
+        (*returnColumnSizes)[i] = n; // 每列中元素个数
+    }
+    ...
+    return res;
+}
+```
+
+C++
+
+``` C++
+class Solution {
+public:
+    vector<vector<int>> generateMatrix(int n) {
+        vector<vector<int>> res(n, vector<int>(n, 0)); // 定义二维数组
+        ...
+        return res;
+    }
+};
+```
+
+Javascript
+
+``` javascript
+var generateMatrix = function(n) {
+    let res = new Array(n).fill(0).map(() => new Array(n).fill(0));
+    ...
+    return res;
+};
+```
+
+Python3
+
+``` python
+class Solution:
+    def generateMatrix(self, n: int) -> List[List[int]]:
+        nums = [[0] * n for _ in range(n)]
+        ...
+        return nums
+```
+
+Go
+
+``` go
+func generateMatrix(n int) [][]int {
+    matrix := make([][]int, n)
+    ...
+    return matrix
+}
+```
+
+Ruby
+
+``` ruby
+def generate_matrix(n)
+    res = Array.new(n) {Array.new(n, 0)} # 创建二维数组
+    ...
+    res
+end
+```
+
 ## 记录
 
 * 数组问题减小时间复杂度
